@@ -1,0 +1,65 @@
+@import '_common/normalize';
+@import '_common/mixins';
+@import '_common/bootstrap-grid';
+
+$footerHeight: 110px;
+
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  //font: 14px/1.41 Arial, Helvetica, sans-serif;
+  @include font-size(13px);
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 0;
+    left: 0;
+    list-style: none outside none;
+  }
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+.wrapper, .footer {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  overflow: hidden;
+
+  &__empty {
+    position: relative;
+    height: $footerHeight + 20;
+  }
+
+}
+.footer {
+  position: relative;
+  margin-top: -$footerHeight;
+  height: $footerHeight;
+}
+.container-fluid {
+  max-width: 1200px;
+}
+
+.row {
+
+}
+
